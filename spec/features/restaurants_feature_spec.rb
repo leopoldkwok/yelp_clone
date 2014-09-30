@@ -81,3 +81,31 @@ describe 'viewing the description of the restaurant' do
 		expect(page).to have_content 'Chicken'
 	end
 end
+
+describe 'creating restaurants' do
+	context 'a valid restaurant' do
+		it "prompts user to fill out a form , then displays the new restaurant" do
+		visit '/restaurants'
+		click_link "Add a restaurant"
+		fill_in 'Name', with: 'KFC'
+		# fill_in 'Cuisine', with: 'Fast food'
+		# fill_in 'Description', with: 'Late night food, hungover food, etc'
+		click_button 'Create Restaurant'
+		expect(page).to have_content 'KFC'
+		expect(current_path).to eq '/restaurants'
+	end
+
+end
+
+	context 'an invalid restaurant' do
+	it 'does not let you submit without a name that is too short' do	
+		visit '/restaurants'
+		click_link 'Add a restaurant'
+		fill_in	 'Name', with: 'KF'
+		click_button 'Create Restaurant'
+		expect(page).not_to have_css 'h2', text: 'kf'
+		expect(page).to have_content 'error'
+	end
+end
+end
+
