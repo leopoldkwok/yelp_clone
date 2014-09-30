@@ -106,6 +106,7 @@ end
 		expect(page).not_to have_css 'h2', text: 'kf'
 		expect(page).to have_content 'error'
 	end
+
 end
 end
 
