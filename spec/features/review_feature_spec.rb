@@ -30,4 +30,9 @@ describe 'reviewing' do
 	end
 
 
+	it "displays a posted time for the post" do 
+		leave_review("So so", "3")
+		expect(page).to have_content("Posted: less than a minute ago")
+	end
+
 end
