@@ -10,6 +10,8 @@ RSpec.describe Review, :type => :model do
 			review = Review.new(rating: 100)
 			# expect(review).to have(1).error_on(:rating)
 			expect(review).not_to be_valid
-	end
+		end
+
+		
 
 end
