@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
-
-
+gem 'devise'
+gem 'omniauth-facebook'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
@@ -33,6 +33,7 @@ gem 'capybara'
 gem 'rspec-collection_matchers'
 gem 'poltergeist'
 gem 'database_cleaner'
+
 end
 
 #mode tidier
