@@ -2,6 +2,10 @@ source 'https://rubygems.org'
 gem 'devise'
 gem 'omniauth-facebook'
 
+gem "paperclip", "~> 4.2"
+
+gem 'aws-sdk', '~> 1.5.7'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 # Use postgresql as the database for Active Record
