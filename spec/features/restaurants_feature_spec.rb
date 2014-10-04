@@ -93,9 +93,9 @@ describe 'creating restaurants' do
 		click_button 'Create Restaurant'
 		expect(page).to have_content 'KFC'
 		expect(current_path).to eq '/restaurants'
-	end
+		end
 
-end
+	end
 
 	context 'an invalid restaurant' do
 	it 'does not let you submit without a name that is too short' do	
@@ -105,8 +105,19 @@ end
 		click_button 'Create Restaurant'
 		expect(page).not_to have_css 'h2', text: 'kf'
 		expect(page).to have_content 'error'
-	end
+		end
 
+	end
 end
-end
+
+# before :each do
+# 	@file = fixture_file_upload('files/test_lic.xml','text/xml')
+# end
+
+# it 'can upload a license' do 
+# 	post :uploadLicense, :upload =>@file 
+# 	response.should be_success
+# end
+
+
 
