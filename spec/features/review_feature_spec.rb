@@ -6,15 +6,15 @@ describe 'reviewing' do
 	end
 
 	def leave_review(thoughts, rating)
-	# it 'allows users to leave a review using a form' do
+	
+	it 'allows users to leave a review using a form' do
 		visit '/restaurants'
 		click_link 'Review KFC'
 		fill_in "Thoughts", with: thoughts
 		select rating, from: 'Rating'
 		click_button 'Leave Review'
-
-		# expect(current_path).to eq '/restaurants'
-		# expect(page).to have_content('so so')
+		expect(current_path).to eq '/restaurants'
+		expect(page).to have_content('so so')
 	end
 
 	it "allows users to leave review using the form which appear alongside restaurant" do
@@ -34,5 +34,7 @@ describe 'reviewing' do
 		leave_review("So so", "3")
 		expect(page).to have_content("Posted: less than a minute ago")
 	end
+
+end
 
 end

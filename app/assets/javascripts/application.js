@@ -12,6 +12,4 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require gmaps
-//= require gmaps_api
 //= require_tree .

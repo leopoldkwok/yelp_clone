@@ -4,17 +4,17 @@
 
 #some jquery
 
-lat = $('lat').text()
-long - $('.long').text()
+# lat = $('lat').text()
+# long - $('.long').text()
 
-new GMaps({
-  div: '#map',
-  lat: -12.043333,
-  lng: -77.028333
-});
+# new GMaps({
+#   div: '#map',
+#   lat: -12.043333,
+#   lng: -77.028333
+# });
 
-map.addMarker{
-  lat: -12.043333,
-  lng: -77.028333,
+# map.addMarker{
+#   lat: -12.043333,
+#   lng: -77.028333,
 
-  }
+#   }
