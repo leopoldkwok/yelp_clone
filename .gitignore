@@ -15,4 +15,8 @@
 /log/*.log
 /tmp
 
+<<<<<<< HEAD
 /config/secrets.yml
+=======
+/config/secrets.yml
+>>>>>>> 5116242... start using gitnore
