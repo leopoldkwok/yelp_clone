@@ -30,8 +30,8 @@ describe "creating restaurants" do
 		visit '/restaurants'
 		click_link "Add a restaurant"
 		fill_in 'Name', with: 'KFC'
-		# fill_in 'Cuisine', with: 'Fast food'
-		# fill_in 'Description', with: 'Late night food, hungover food, etc'
+		fill_in 'Cuisine', with: 'Fast food'
+		fill_in 'Description', with: 'Late night food, hungover food, etc'
 		click_button 'Create Restaurant'
 		expect(page).to have_content 'KFC'
 		expect(current_path).to eq '/restaurants'
