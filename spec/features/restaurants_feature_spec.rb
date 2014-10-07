@@ -30,8 +30,8 @@ describe "creating restaurants" do
 		visit '/restaurants'
 		click_link "Add a restaurant"
 		fill_in 'Name', with: 'KFC'
-		fill_in 'Cuisine', with: 'Fast food'
-		fill_in 'Description', with: 'Late night food, hungover food, etc'
+		# fill_in 'Cuisine', with: 'Fast food'
+		# fill_in 'Description', with: 'Late night food, hungover food, etc'
 		click_button 'Create Restaurant'
 		expect(page).to have_content 'KFC'
 		expect(current_path).to eq '/restaurants'
@@ -88,8 +88,8 @@ describe 'creating restaurants' do
 		visit '/restaurants'
 		click_link "Add a restaurant"
 		fill_in 'Name', with: 'KFC'
-		# fill_in 'Cuisine', with: 'Fast food'
-		# fill_in 'Description', with: 'Late night food, hungover food, etc'
+		fill_in 'Cuisine', with: 'Fast food'
+		fill_in 'Description', with: 'Late night food, hungover food, etc'
 		click_button 'Create Restaurant'
 		expect(page).to have_content 'KFC'
 		expect(current_path).to eq '/restaurants'
@@ -111,13 +111,13 @@ describe 'creating restaurants' do
 end
 
 # before :each do
-# 	@file = fixture_file_upload('files/test_lic.xml','text/xml')
-# end
+#  	@file = fixture_file_upload('files/test_lic.xml','text/xml')
+#  end
 
-# it 'can upload a license' do 
-# 	post :uploadLicense, :upload =>@file 
-# 	response.should be_success
-# end
+#  it 'can upload a license' do 
+# # 	post :uploadLicense, :upload =>@file 
+# # 	response.should be_success
+# # end
 
 
 
